@@ -3,8 +3,27 @@
 #include <locale.h>
 #include <conio.h>
 
+void montaTabuleiro();
+void iniciaTabuleiro();
+char tiroEmbarcacao(char opcao, int jogador);
+void jogadaTabuleiro();
+
 char tabuleiro[20][20][2];
 char pontuacao[2];
+
+int main(){
+	setlocale(LC_ALL, "Portuguese");
+	char sair = 'N';
+	
+	montaTabuleiro();
+	
+	/* AQUI JÁ COMEÇA O BOM DO GAME :D */
+	jogadaTabuleiro();
+	
+	
+	system("Pause");
+	  	   
+}
 
 void iniciaTabuleiro(){
   int x, y, jogador;
@@ -242,18 +261,5 @@ void jogadaTabuleiro(){
 	
 }
 
-int main(){
-	setlocale(LC_ALL, "Portuguese");
-	char sair = 'N';
-	
-	montaTabuleiro();
-	
-	/* AQUI JÁ COMEÇA O BOM DO GAME :D */
-	jogadaTabuleiro();
-	
-	
-	system("Pause");
-	  	   
-}
 
 
