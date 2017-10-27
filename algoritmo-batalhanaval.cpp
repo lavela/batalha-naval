@@ -3,8 +3,8 @@
 #include <locale.h>
 #include <conio.h>
 
-void montaTabuleiro();
 void iniciaTabuleiro();
+void montaTabuleiro();
 char tiroEmbarcacao(char opcao, int jogador);
 void jogadaTabuleiro();
 
@@ -17,7 +17,7 @@ int main(){
 	
 	montaTabuleiro();
 	
-	/* AQUI J¡ COME«A O BOM DO GAME :D */
+	/* AQUI J√Å COME√áA O BOM DO GAME :D */
 	jogadaTabuleiro();
 	
 	
@@ -48,10 +48,10 @@ void montaTabuleiro(){
 		printf("\nJogador %d preencha seu tabuleiro \n\n", jogador);
 		
 		do{
-			printf("\nOpÁ„o : \n S - Subimarino \t C - CouraÁado \n P - Porta Avi„o \t R - Resgate \n\n VocÍ pode escolher atÈ duas opÁıes de cada embarcaÁ„o! \n");
+			printf("\nOp√ß√£o : \n S - Subimarino \t C - Coura√ßado \n P - Porta Avi√£o \t R - Resgate \n\n Voc√™ pode escolher at√© duas op√ß√µes de cada embarca√ß√£o! \n");
 			scanf("%c", &opcao);
 			
-			/* VERIFICA QUANTIDADE DE EMBARCA«’ES */
+			/* VERIFICA QUANTIDADE DE EMBARCA√á√ïES */
 			int verificaEmbarcacao = 0, i = 1;
 			
 			for(int x = 0; x < 20; x++)
@@ -64,85 +64,85 @@ void montaTabuleiro(){
 		 	if(opcao == 'S'){
 		 		if(verificaEmbarcacao < 4){
 			 		while(i <= 2){
-			 			printf("\nDigite a %d posiÁ„o da embarcaÁ„o ** Submarino ** : \n", i);
+			 			printf("\nDigite a %d posi√ß√£o da embarca√ß√£o ** Submarino ** : \n", i);
 			 			scanf("%d %d", &posicao_1, &posicao_2);
 			 			
 						if(tabuleiro[posicao_1][posicao_2][jogador] == 'A'){
 							tabuleiro[posicao_1][posicao_2][jogador] = 'S';
 							i++;
 						}  else {
-							printf("\nA posiÁ„o que vocÍ digitou j· possui uma embarcaÁ„o.! \n");
+							printf("\nA posi√ß√£o que voc√™ digitou j√° possui uma embarca√ß√£o.! \n");
 						}
 						system("cls");	  					
 			 		}
 			 		fimTabuleiro++;
 		 		} else {
-					printf("\nVocÍ atingiu o m·ximo da embarcaÁ„o ** Submarino **.! \n");
+					printf("\nVoc√™ atingiu o m√°ximo da embarca√ß√£o ** Submarino **.! \n");
 				}
 			} 
 			
 			else if(opcao == 'C'){
 				if(verificaEmbarcacao < 6){
 			 		while(i <= 3){
-			 			printf("\nDigite a %d posiÁ„o da embarcaÁ„o ** CouraÁado ** : \n", i);
+			 			printf("\nDigite a %d posi√ß√£o da embarca√ß√£o ** Coura√ßado ** : \n", i);
 			 			scanf("%d %d", &posicao_1, &posicao_2);
 			 			
 						if(tabuleiro[posicao_1][posicao_2][jogador] == 'A'){
 							tabuleiro[posicao_1][posicao_2][jogador] = 'C';
 							i++;
 						}  else {
-							printf("\nA posiÁ„o que vocÍ digitou j· possui uma embarcaÁ„o.! \n");
+							printf("\nA posi√ß√£o que voc√™ digitou j√° possui uma embarca√ß√£o.! \n");
 						}
 						system("cls");	  					
 			 		}
 			 		fimTabuleiro++;
 				} else {
-					printf("\nVocÍ atingiu o m·ximo da embarcaÁ„o ** CouraÁado **.! \n");
+					printf("\nVoc√™ atingiu o m√°ximo da embarca√ß√£o ** Coura√ßado **.! \n");
 				}
 			}
 			
 			else if(opcao == 'P'){
 				if(verificaEmbarcacao < 8){
 			 		while(i <= 4){
-			 			printf("\nDigite a %d posiÁ„o da embarcaÁ„o ** Porta Avi„o ** : \n", i);
+			 			printf("\nDigite a %d posi√ß√£o da embarca√ß√£o ** Porta Avi√£o ** : \n", i);
 			 			scanf("%d %d", &posicao_1, &posicao_2);
 			 			
 						if(tabuleiro[posicao_1][posicao_2][jogador] == 'A'){
 							tabuleiro[posicao_1][posicao_2][jogador] = 'P';
 							i++;
 						}  else {
-							printf("\nA posiÁ„o que vocÍ digitou j· possui uma embarcaÁ„o.! \n");
+							printf("\nA posi√ß√£o que voc√™ digitou j√° possui uma embarca√ß√£o.! \n");
 						}
 						system("cls");	  					
 			 		}
 			 		fimTabuleiro++;
 				} else {
-					printf("\nVocÍ atingiu o m·ximo da embarcaÁ„o ** Porta Avi„o **.! \n");
+					printf("\nVoc√™ atingiu o m√°ximo da embarca√ß√£o ** Porta Avi√£o **.! \n");
 				}
 			}
 			
 			else if(opcao == 'R'){
 				if(verificaEmbarcacao < 2){
 			 		while(i <= 1){
-			 			printf("\nDigite a %d posiÁ„o da embarcaÁ„o ** Resgate ** : \n", i);
+			 			printf("\nDigite a %d posi√ß√£o da embarca√ß√£o ** Resgate ** : \n", i);
 			 			scanf("%d %d", &posicao_1, &posicao_2);
 			 			
 						if(tabuleiro[posicao_1][posicao_2][jogador] == 'A'){
 							tabuleiro[posicao_1][posicao_2][jogador] = 'R';
 							i++;
 						} else {
-							printf("\nA posiÁ„o que vocÍ digitou j· possui uma embarcaÁ„o.! \n");
+							printf("\nA posi√ß√£o que voc√™ digitou j√° possui uma embarca√ß√£o.! \n");
 						}  
 						system("cls");	 					
 			 		}
 			 		fimTabuleiro++;
 				}  else {
-					printf("\nVocÍ atingiu o m·ximo da embarcaÁ„o ** Resgate **.! \n");
+					printf("\nVoc√™ atingiu o m√°ximo da embarca√ß√£o ** Resgate **.! \n");
 				}
 			}
 			
 			else {
-				printf("\nOpÁ„o da embarcaÁ„o inv·lida \n");
+				printf("\nOp√ß√£o da embarca√ß√£o inv√°lida \n");
 			}
 			
 			fflush(stdin);
@@ -157,23 +157,23 @@ void montaTabuleiro(){
 char tiroEmbarcacao(char opcao, int jogador){
 	switch(opcao){
 		case 'S':
-			return printf("\n ParabÈns Jogador %d, vocÍ atingiu a embarcaÁ„o ** Submarino ** \n", jogador);
+			return printf("\n Parab√©ns Jogador %d, voc√™ atingiu a embarca√ß√£o ** Submarino ** \n", jogador);
 			pontuacao[jogador] = pontuacao[jogador] + 10;
 		break;
 		case 'C':
-			return printf("\n ParabÈns Jogador %d, vocÍ atingiu a embarcaÁ„o ** CouraÁado ** \n", jogador);
+			return printf("\n Parab√©ns Jogador %d, voc√™ atingiu a embarca√ß√£o ** Coura√ßado ** \n", jogador);
 			pontuacao[jogador] = pontuacao[jogador] + 20;
 		break;
 		case 'P':
-			return printf("\n ParabÈns Jogador %d, vocÍ atingiu a embarcaÁ„o ** Porta Avi„o ** \n", jogador);
+			return printf("\n Parab√©ns Jogador %d, voc√™ atingiu a embarca√ß√£o ** Porta Avi√£o ** \n", jogador);
 			pontuacao[jogador] = pontuacao[jogador] + 30;
 		break;
 		case 'R':
-			return printf("\n ParabÈns Jogador %d, vocÍ atingiu a embarcaÁ„o ** Resgate ** \n", jogador);
+			return printf("\n Parab√©ns Jogador %d, voc√™ atingiu a embarca√ß√£o ** Resgate ** \n", jogador);
 			pontuacao[jogador] = pontuacao[jogador] + 5;
 		break;
 		default:
-			return printf("\n Ah n„o! Jogador %d, vocÍ atingiu ** ¡gua **, aprimore a sua mira na proxÌma jogada! %c \n", jogador, opcao);
+			return printf("\n Ah n√£o! Jogador %d, voc√™ atingiu ** √Ågua **, aprimore a sua mira na prox√≠ma jogada! %c \n", jogador, opcao);
 		break;
 	}
 }
@@ -184,24 +184,24 @@ void jogadaTabuleiro(){
 	
 	/* LET'S GO A JOGADAS  */
 	system("cls");
-	printf("\nVocÍ pode desistir de jogar a qualquer momento apenas digitando a letra ** F ** na sua jogada, mais a vitoria fica com seu advers·rio!!! Nunca desista \n\n ");
-	printf("\nVamos comeÁar o show e destruir a todas embarcaÁıes!! \n\n ");
+	printf("\nVoc√™ pode desistir de jogar a qualquer momento apenas digitando a letra ** F ** na sua jogada, mais a vitoria fica com seu advers√°rio!!! Nunca desista \n\n ");
+	printf("\nVamos come√ßar o show e destruir a todas embarca√ß√µes!! \n\n ");
 	
 	do{
 		
 		i = 1;
 		
 		if((jogador % 2) != 0){
-			/* VERIFICA SE TODAS AS EMBARCA«’ES FORAM DESTRUIDAS QUANTIDADE DE PONTOS = 410 */
+			/* VERIFICA SE TODAS AS EMBARCA√á√ïES FORAM DESTRUIDAS QUANTIDADE DE PONTOS = 410 */
 			if(pontuacao[jogador] == 410){
 				winner = jogador; sair = 2;
 			}
 			
-			/* JOGADOR 1 ATACA A EMBARCA«√O DA MATRIZ DO JOGADOR 2*/
+			/* JOGADOR 1 ATACA A EMBARCA√á√ÉO DA MATRIZ DO JOGADOR 2*/
 			jogador++;
 			
 			while(i <= 2){
-				printf("\nJogador %d Digite a %d posiÁ„o de sua jogada: \n", jogador - 1, i);
+				printf("\nJogador %d Digite a %d posi√ß√£o de sua jogada: \n", jogador - 1, i);
 				scanf("%c %c", &posicao_1, &posicao_2);
 				
 				/* VERIFICA SE O JOGADOR DESEJA SAIR */
@@ -215,7 +215,7 @@ void jogadaTabuleiro(){
 						tabuleiro[posicao_1][posicao_2][jogador] = '*';
 						i++;
 					} else {
-						printf("\nVocÍ atingiu uma jogada feita anteriormente, tente novamente.! \n");
+						printf("\nVoc√™ atingiu uma jogada feita anteriormente, tente novamente.! \n");
 					}
 					
 				}
@@ -223,16 +223,16 @@ void jogadaTabuleiro(){
 			
 			
 		} else {
-			/* VERIFICA SE TODAS AS EMBARCA«’ES FORAM DESTRUIDAS QUANTIDADE DE PONTOS = 410 */
+			/* VERIFICA SE TODAS AS EMBARCA√á√ïES FORAM DESTRUIDAS QUANTIDADE DE PONTOS = 410 */
 			if(pontuacao[jogador] == 410){
 				winner = jogador; sair = 2;
 			}
 			
-			/* JOGADOR 2 ATACA A EMBARCA«√O DA MATRIZ DO JOGADOR 1*/
+			/* JOGADOR 2 ATACA A EMBARCA√á√ÉO DA MATRIZ DO JOGADOR 1*/
 			jogador--;
 			
 			while(i <= 2){
-				printf("\nJogador %d Digite a %d posiÁ„o de sua jogada: \n", jogador + 1, i);
+				printf("\nJogador %d Digite a %d posi√ß√£o de sua jogada: \n", jogador + 1, i);
 				scanf("%c %c", &posicao_1, &posicao_2);
 				
 				/* VERIFICA SE O JOGADOR DESEJA SAIR */
@@ -246,7 +246,7 @@ void jogadaTabuleiro(){
 						tabuleiro[posicao_1][posicao_2][jogador] = '*';
 						i++;
 					} else {
-						printf("\nVocÍ atingiu uma jogada feita anteriormente, tente novamente.! \n");
+						printf("\nVoc√™ atingiu uma jogada feita anteriormente, tente novamente.! \n");
 					}
 					
 				}
@@ -257,7 +257,7 @@ void jogadaTabuleiro(){
 	
 	/* GANHADOR DO JOGO WINNER */
 	system("cls");
-	printf("\n\n****** Jogador %d Venceu a Batalha Naval parabÈns pela conquista.!!!! ******** \n\n", winner);
+	printf("\n\n****** Jogador %d Venceu a Batalha Naval parab√©ns pela conquista.!!!! ******** \n\n", winner);
 	
 }
 
