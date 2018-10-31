@@ -25,7 +25,7 @@ int main(){
 	  	   
 }
 
-void iniciaTabuleiro(){
+void iniciaTabuleiro () {
   int x, y, jogador;
   
 	for(jogador = 1; jogador <= 2; jogador++)
@@ -34,7 +34,7 @@ void iniciaTabuleiro(){
   	 			tabuleiro[x][y][jogador] = 'A';  
 }
 
-void montaTabuleiro(){
+void montaTabuleiro () {
 	int jogador = 1;
 	
 	do{	
@@ -154,7 +154,7 @@ void montaTabuleiro(){
 	}while(jogador <= 2);
 }
 
-char tiroEmbarcacao(char opcao, int jogador){
+char tiroEmbarcacao (char opcao, int jogador) {
 	switch(opcao){
 		case 'S':
 			return printf("\n Parabéns Jogador %d, você atingiu a embarcação ** Submarino ** \n", jogador);
@@ -178,7 +178,7 @@ char tiroEmbarcacao(char opcao, int jogador){
 	}
 }
 
-void jogadaTabuleiro(){
+void jogadaTabuleiro () {
 	int sair = 0, jogador = 1, i, winner;
 	int posicao_1 = 0, posicao_2 = 0;
 	
@@ -260,6 +260,6 @@ void jogadaTabuleiro(){
 	printf("\n\n****** Jogador %d Venceu a Batalha Naval parabéns pela conquista.!!!! ******** \n\n", winner);
 	
 }
-
+// Correção da escrita dos metodos
 
 
